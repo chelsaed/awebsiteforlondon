@@ -7,12 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
 </head>
 <body>
     <section class="header">
         <nav>
            <a href="index.html"><img src="./images/Londoncatchingballshot.png"></a>
-           <div class="nav-link">
+           <div class="nav-link" id="navLink">
+            <i class="fa fa-times" oneclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -20,19 +22,54 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
            </div>
+           <i class="fa fa-bars" onclick="hideMenu()"></i>
+
         </nav>
 
-    </section>
+    
         <div class="text-box">
             <h1>London Dysart-Bates</h1>
-            <p>London a 15 year old sophomore who has been play footbal since he was 4 years old. </p>
-            <a href="">Click here to learn more about London</a>
+            
+            <a href="" class="london-btn">Click here to see some London's highlights</a>
         </div>
+    </section>
 
+    <!-- ----About Section---- -->
+
+    <section class="about">
+        <h1>Get to know London</h1>
+        <p>London a 15 year old sophomore who has been playing football since he was 4 years old. He started with flag then went to little league. He is now playing Varsity football with his high school. He has shown his deidcation and resileince through the years becuase he never gives up. (fill in more) </p>
        
+    </section>
+        
+<!-- ----Highlights Section---- -->
+
+
+    <section class="highlights">
+        <h1>London's Highlights</h1>
+        <div>
+            <iframe width="560" height="315"class="video" src='https://www.hudl.com/embed/video/3/17802356/635cb5ef6e814908e071d15f' width='640' height='360' frameborder='0' allowfullscreen></iframe>
+        </div>
+    </section>
+    
 
 
 
+
+
+     
+   <!-- ------Javascript for Toggle menu code below------  -->
+    <script>
+        var navLinks = document.getElementById("navLink");
+        
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
 
 
 </body>
